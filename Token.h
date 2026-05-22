@@ -9,6 +9,8 @@ enum class TokenType {
     VERBO,
     NUMERO,
     UNIDAD,
+    IRRELEVANTE,
+    ADVERBIO_NEGA,
     FIN_ARCHIVO,
     ERROR_TOKEN
 };
