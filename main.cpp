@@ -1,11 +1,23 @@
 #include <iostream>
-#include "Lexer.h"
+#include <fstream>
+#include <sstream>
+
+#include "Scaner.h"
 
 using namespace std;
 
 int main() {
 
-    string texto = "pepito cumple un anio";
+    ifstream archivo("entrada.txt");
+
+    if (!archivo.is_open()) {
+        cout << "No existe entrada" << endl;
+        return 0;
+    }
+
+    stringstream buffer;
+    buffer << archivo.rdbuf();
+    string texto = buffer.str();
 
     Lexer lexer(texto);
 
@@ -15,6 +27,8 @@ int main() {
 
         cout << "<"<< t.getTypeAsString()<< ", "<< t.getLexema()<< ">"<< endl;
     }
+
+    archivo.close();
 
     return 0;
 }
