@@ -9,13 +9,11 @@ using namespace std;
 class Lexer {
 private:
     string input;
-    int posicion;
+    //int posicion;
 
 public:
     Lexer(std::string texto);
-
-    char obtenerActual();
-    void avanzar();
-
+    //char obtenerActual();
+    //void avanzar();
     vector<Token> analizar();
 };
