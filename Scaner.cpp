@@ -1,4 +1,4 @@
-#include "Lexer.h"
+#include "Scaner.h"
 #include <sstream>
 
 using namespace std;
